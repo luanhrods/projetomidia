@@ -24,7 +24,7 @@ export function HeroSection() {
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           {/* Left Column: Content */}
           <div
-            className="relative z-10 animate-in fade-in slide-in-from-left-12 duration-1000"
+            className="relative z-10 col-start-1 row-start-1 animate-in fade-in slide-in-from-left-12 duration-1000"
             style={{ transform: `translateY(${scrollY * 0.1}px)` }}
           >
             <div className="inline-flex items-center gap-2 rounded-full border-2 border-accent bg-accent/10 px-3 py-1.5 text-sm font-bold text-accent sm:px-4 sm:py-2">
@@ -61,7 +61,7 @@ export function HeroSection() {
 
           {/* Right Column: 3D Object */}
           <div
-            className="relative h-[400px] animate-in fade-in slide-in-from-right-12 duration-1000 lg:h-[600px]"
+            className="relative z-0 col-start-1 row-start-1 h-[500px] animate-in fade-in slide-in-from-right-12 duration-1000 lg:col-start-2 lg:h-[600px] opacity-40 lg:opacity-100"
             style={{ transform: `translateY(${scrollY * -0.2}px)` }}
           >
             <HeroBackground3D />
