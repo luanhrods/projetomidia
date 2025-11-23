@@ -3,10 +3,19 @@
 import { useState } from "react"
 import { X, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { DesktopHeader } from "./desktop-header"
 
-export function FlyingMenu() {
+export function Header() {
+  const isMobile = useIsMobile()
   const [isOpen, setIsOpen] = useState(false)
 
+  // Renderiza o menu otimizado para desktop
+  if (!isMobile) {
+    return <DesktopHeader />
+  }
+
+  // Renderiza o menu fly-out para mobile
   return (
     <>
       <Button
