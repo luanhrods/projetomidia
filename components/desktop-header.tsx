@@ -32,10 +32,16 @@ export function DesktopHeader() {
             <span className="sr-only">Open menu</span>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-56 mt-2">
+        <DropdownMenuContent
+          align="end"
+          className="w-80 mt-2 bg-primary text-primary-foreground border-l-4 border-accent p-2 shadow-2xl space-y-1"
+        >
           {menuItems.map((item) => (
-            <DropdownMenuItem key={item.href} asChild>
-              <Link href={item.href} className="font-bold">
+            <DropdownMenuItem key={item.href} asChild className="p-0">
+              <Link
+                href={item.href}
+                className="w-full text-lg font-bold py-2 px-3 rounded-md hover:bg-primary hover:text-accent focus:bg-primary focus:text-accent transition-all duration-300 hover:translate-x-2 focus:outline-none"
+              >
                 {item.label}
               </Link>
             </DropdownMenuItem>
