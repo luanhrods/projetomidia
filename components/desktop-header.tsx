@@ -12,6 +12,7 @@ import Link from "next/link"
 
 export function DesktopHeader() {
   const menuItems = [
+    { href: "/", label: "Home" },
     { href: "#work", label: "Work" },
     { href: "#services", label: "Services" },
     { href: "/studio", label: "Studio" },
@@ -34,7 +35,7 @@ export function DesktopHeader() {
         </DropdownMenuTrigger>
         <DropdownMenuContent
           align="end"
-          className="w-80 mt-2 bg-primary text-primary-foreground border-l-4 border-accent p-2 shadow-2xl space-y-1"
+          className="w-[26rem] mt-2 bg-primary text-primary-foreground border-l-4 border-accent p-2 shadow-2xl space-y-1"
         >
           {menuItems.map((item) => (
             <DropdownMenuItem key={item.href} asChild className="p-0">
