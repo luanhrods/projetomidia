@@ -53,7 +53,7 @@ export function FlyingMenu() {
             {[
               { href: "#work", label: "Work" },
               { href: "#services", label: "Services" },
-              { href: "#studio", label: "Studio" },
+              { href: "/studio", label: "Studio" },
               { href: "#approach", label: "Approach" },
               { href: "#contact", label: "Contact" },
             ].map((item) => (
