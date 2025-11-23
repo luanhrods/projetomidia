@@ -1,18 +1,53 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+    const handleMouseMove = (event: MouseEvent) => {
+      setMousePosition({ x: event.clientX, y: event.clientY })
+    }
+    window.addEventListener("mousemove", handleMouseMove)
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove)
+    }
+  }, [])
+
+  let backgroundX = 0
+  let backgroundY = 0
+  let contentX = 0
+  let contentY = 0
+
+  if (isMounted) {
+    const centerX = window.innerWidth / 2
+    const centerY = window.innerHeight / 2
+    backgroundX = (mousePosition.x - centerX) * -0.02
+    backgroundY = (mousePosition.y - centerY) * -0.02
+    contentX = (mousePosition.x - centerX) * 0.01
+    contentY = (mousePosition.y - centerY) * 0.01
+  }
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-background to-card pt-24 pb-12 sm:pt-28 md:pt-32 lg:pt-20">
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div
+        className="absolute inset-0 z-0 overflow-hidden transition-transform duration-300 ease-out"
+        style={{ transform: `translate(${backgroundX}px, ${backgroundY}px)` }}
+      >
         <div className="absolute w-96 h-96 bg-accent/10 rounded-full blur-3xl left-1/4 top-1/4 animate-pulse" />
         <div className="absolute w-96 h-96 bg-accent/5 rounded-full blur-3xl right-1/4 bottom-1/4 animate-pulse delay-1000" />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div
+        className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 transition-transform duration-300 ease-out"
+        style={{ transform: `translate(${contentX}px, ${contentY}px)` }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border-2 border-accent bg-accent/10 text-accent font-bold mb-6 sm:mb-8 animate-pulse mt-6 sm:mt-8 text-sm sm:text-base">
             <Sparkles className="h-3 w-3 sm:h-4 sm:w-4" />
