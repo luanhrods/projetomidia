@@ -22,14 +22,6 @@ const staggerContainer = {
 }
 
 export function StudioContent() {
-  const teamMembers = [
-    { name: "Alex Johnson", role: "Creative Director" },
-    { name: "Maria Garcia", role: "Lead Strategist" },
-    { name: "Chen Wei", role: "Art Director" },
-    { name: "Samira Khan", role: "Head of Development" },
-    { name: "David Lee", role: "Senior Designer" },
-  ]
-
   return (
     <main className="min-h-screen bg-background overflow-hidden">
       <motion.section
@@ -72,11 +64,11 @@ export function StudioContent() {
         className="py-20 px-6 md:px-12 lg:px-24"
       >
         <div className="max-w-7xl mx-auto grid md:grid-cols-5 gap-12 items-center">
-          <div className="md:col-span-2 aspect-w-1 aspect-h-1">
+          <div className="md:col-span-2">
             <img
               src="/placeholder.svg?height=800&width=800&query=wise+founder+portrait+monochrome"
               alt="Founder Sérgio Rodrigues"
-              className="w-full h-full object-cover rounded-3xl grayscale"
+              className="w-full h-full object-cover rounded-3xl grayscale aspect-square"
             />
           </div>
           <div className="md:col-span-3 text-left">
@@ -160,38 +152,6 @@ export function StudioContent() {
           We don't build for trends that fade. We build for impact that endures. We partner with ambitious brands to
           create work that will be celebrated not just today, but for years to come.
         </p>
-      </motion.section>
-
-      <motion.section
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={staggerContainer}
-        className="py-20 px-6 md:px-12 lg:px-24 bg-muted/20"
-      >
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h2 variants={fadeIn} className="text-6xl md:text-8xl font-bold mb-16 text-balance">
-            Meet the Artisans
-          </motion.h2>
-          <motion.div
-            variants={staggerContainer}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8"
-          >
-            {teamMembers.map((member) => (
-              <motion.div variants={fadeIn} key={member.name} className="group">
-                <div className="aspect-square bg-background rounded-3xl mb-4 overflow-hidden">
-                  <img
-                    src={`/placeholder.svg?height=400&width=400&query=creative+team+member+${member.name}`}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <h4 className="text-xl font-bold">{member.name}</h4>
-                <p className="text-muted-foreground">{member.role}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
       </motion.section>
 
       <motion.section
