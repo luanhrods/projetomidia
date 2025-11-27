@@ -10,7 +10,7 @@ declare global {
 
 export function TallyForm() {
   // TODO: Replace with your Tally form URL
-  const TALLY_FORM_URL = "https://tally.so/r/aQOd19" // Example URL
+  const TALLY_FORM_URL = "https://tally.so/r/w2zlkO" // Example URL
 
   useEffect(() => {
     const script = document.createElement("script")
@@ -33,7 +33,7 @@ export function TallyForm() {
       data-tally-src={TALLY_FORM_URL}
       loading="lazy"
       width="100%"
-      height="300"
+      height="550"
       frameBorder="0"
       marginHeight="0"
       marginWidth="0"
