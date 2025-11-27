@@ -29,10 +29,8 @@ const projects = [
       "The new website reflected well on new customers and helped people find the coffee shop's location and information easily. The immersive experience established The Roastory as a standout local coffee brand.",
   },
   {
-    id: "cacador-de-carros",
-    title: "Caçador de Carros 
-    
-    (Car Hunter)",
+    id: "carhunter",
+    title: "Car Hunter",
     category: "Web Design & Development",
     image: "/placeholder.svg?height=900&width=1600&query=car+hunter+website+mockup",
     challenge:
