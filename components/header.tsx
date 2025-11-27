@@ -64,7 +64,7 @@ export function Header() {
               { href: "/work", label: "Work" },
               { href: "#services", label: "Services" },
               { href: "/studio", label: "Studio" },
-              { href: "#contact", label: "Contact" },
+              { href: "/contact", label: "Contact" },
             ].map((item) => (
               <a
                 key={item.href}

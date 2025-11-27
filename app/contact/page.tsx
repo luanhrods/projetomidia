@@ -2,8 +2,7 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"
-import Link from "next/link"
+import { Mail } from "lucide-react"
 import { TallyForm } from "@/components/tally-form"
 
 export default function ContactPage() {
@@ -11,77 +10,29 @@ export default function ContactPage() {
     <>
       <Header />
       <main className="min-h-screen bg-background">
-        <section className="pt-32 pb-20 px-6 md:px-12 lg:px-24">
-          <div className="max-w-7xl mx-auto">
-            <Link
-              href="/"
-              className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors mb-8"
-            >
-              <ArrowRight className="w-4 h-4 mr-2 rotate-180" />
-              Back to Home
-            </Link>
-            <h1 className="text-[8vw] md:text-[120px] lg:text-[160px] font-bold leading-[0.9] tracking-tight mb-6 text-balance">
-              Let's
-              <br />
-              Connect
-            </h1>
-            <p className="text-2xl md:text-3xl text-muted-foreground max-w-2xl text-pretty">
-              Ready to create something extraordinary? We'd love to hear from you.
-            </p>
+        <section id="contact" className="py-16 sm:py-20 md:py-24 lg:py-32 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[6rem] sm:text-[10rem] md:text-[15rem] lg:text-[20rem] xl:text-[25rem] font-black text-foreground/5 leading-none pointer-events-none select-none whitespace-nowrap">
+            LET'S TALK
           </div>
-        </section>
 
-        <section className="py-20 px-6 md:px-12 lg:px-24">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-5xl md:text-6xl font-bold mb-12">Get in Touch</h2>
-              <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-accent-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">Email</h3>
-                    <a
-                      href="mailto:hey@projetomidia.com"
-                      className="text-lg text-muted-foreground hover:text-accent transition-colors"
-                    >
-                      hey@projetomidia.com
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-accent-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">Phone</h3>
-                    <a
-                      href="tel:+1234567890"
-                      className="text-lg text-muted-foreground hover:text-accent transition-colors"
-                    >
-                      +1 (234) 567-890
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-accent-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">Location</h3>
-                    <p className="text-lg text-muted-foreground">
-                      San Francisco, CA
-                      <br />
-                      United States
-                    </p>
-                  </div>
-                </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-5xl mx-auto text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-accent text-accent-foreground mb-6 sm:mb-8 animate-float">
+                <Mail className="w-8 h-8 sm:w-10 sm:w-10 md:w-12 md:h-12" />
               </div>
-            </div>
 
-            <div className="bg-muted/20 rounded-3xl p-2 md:p-3">
-              <TallyForm />
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black mb-6 sm:mb-8 text-balance leading-none">
+                Ready to create something <span className="italic text-accent">extraordinary?</span>
+              </h1>
+
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-10 sm:mb-12 md:mb-16 max-w-3xl mx-auto font-medium leading-relaxed">
+                Let's discuss how we can elevate your brand and drive real business results.
+              </p>
+
+              <div className="bg-card/50 backdrop-blur-sm border border-border/20 rounded-3xl p-2 md:p-3 max-w-2xl mx-auto">
+                <TallyForm />
+              </div>
             </div>
           </div>
         </section>
