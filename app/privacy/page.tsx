@@ -77,8 +77,8 @@ export default function PrivacyPage() {
                 <h2 className="text-3xl font-bold text-foreground mb-4">Contact Us</h2>
                 <p className="text-lg leading-relaxed">
                   If you have any questions about this Privacy Policy, please contact us at{" "}
-                  <a href="mailto:contato@projetomidia.com" className="text-accent hover:underline">
-                    contato@projetomidia.com
+                  <a href="mailto:hey@projetomidia.com" className="text-accent hover:underline">
+                    hey@projetomidia.com
                   </a>
                 </p>
               </div>

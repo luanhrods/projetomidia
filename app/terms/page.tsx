@@ -101,8 +101,8 @@ export default function TermsPage() {
                 <h2 className="text-3xl font-bold text-foreground mb-4">Contact</h2>
                 <p className="text-lg leading-relaxed">
                   For questions about these Terms of Service, please contact us at{" "}
-                  <a href="mailto:contato@projetomidia.com" className="text-accent hover:underline">
-                    contato@projetomidia.com
+                  <a href="mailto:hey@projetomidia.com" className="text-accent hover:underline">
+                    hey@projetomidia.com
                   </a>
                 </p>
               </div>
