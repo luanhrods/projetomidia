@@ -32,9 +32,9 @@ export function TallyForm() {
       data-tally-src={TALLY_FORM_URL}
       loading="lazy"
       width="100%"
-      frameBorder="0"
-      marginHeight="0"
-      marginWidth="0"
+      frameBorder={0}
+      marginHeight={0}
+      marginWidth={0}
       title="Contact form"
       className="rounded-3xl"
     ></iframe>

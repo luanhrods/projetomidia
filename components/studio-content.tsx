@@ -1,10 +1,10 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { ArrowRight, Beaker, BrainCircuit, Brush, Eye, Heart, Users } from "lucide-react"
+import { motion, type Variants } from "framer-motion"
+import { ArrowRight, BrainCircuit, Brush, Eye } from "lucide-react"
 import Link from "next/link"
 
-const fadeIn = {
+const fadeIn: Variants = {
   initial: { opacity: 0, y: 30 },
   animate: {
     opacity: 1,
@@ -13,7 +13,7 @@ const fadeIn = {
   },
 }
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   animate: {
     transition: {
       staggerChildren: 0.15,

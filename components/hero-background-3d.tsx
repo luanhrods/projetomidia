@@ -3,7 +3,7 @@
 import { useRef } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { Icosahedron } from "@react-three/drei"
-import { Color } from "three"
+import * as THREE from "three"
 
 function Scene() {
   const meshRef = useRef<THREE.Mesh>(null!)
@@ -23,7 +23,7 @@ function Scene() {
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 5]} intensity={1} />
       <Icosahedron ref={meshRef} args={[2.5, 1]}>
-        <meshStandardMaterial wireframe wireframeLinewidth={0.5} color={new Color("hsl(var(--accent))")} />
+        <meshStandardMaterial wireframe wireframeLinewidth={0.5} color={new THREE.Color("hsl(var(--accent))")} />
       </Icosahedron>
     </>
   )
