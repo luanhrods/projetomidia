@@ -98,6 +98,9 @@ export function Footer() {
           <p className="text-muted-foreground font-medium text-sm sm:text-base">
             © {new Date().getFullYear()} projetomidia. All rights reserved.
           </p>
+          <p className="text-muted-foreground font-medium text-sm sm:text-base">
+            Crafted with ❤️ by PMD
+          </p>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8 font-medium text-muted-foreground text-sm sm:text-base">
             <a href="/privacy" className="hover:text-accent transition-colors">
               Privacy Policy
