@@ -23,7 +23,7 @@ export function WorkSection() {
       href: "/work#roastory",
     },
     {
-      title: "Caçador de Carros",
+      title: "Car Hunter (Caçador de Carros)",
       category: "Web Design & Development",
       image: "/placeholder.svg?height=800&width=1200&query=car+dealership+website",
       color: "from-accent/30 to-transparent",
