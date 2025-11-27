@@ -1,9 +1,65 @@
+"use client"
+
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"
 import Link from "next/link"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import * as z from "zod"
+import { toast } from "sonner"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
+
+const formSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+})
 
 export default function ContactPage() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  })
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const endpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT
+
+    if (!endpoint) {
+      toast.error("Form submission endpoint is not configured.")
+      return
+    }
+
+    const promise = fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok")
+      }
+      return response.json()
+    })
+
+    toast.promise(promise, {
+      loading: "Sending message...",
+      success: () => {
+        form.reset()
+        return "Your message has been sent successfully!"
+      },
+      error: "There was an error sending your message.",
+    })
+  }
+
   return (
     <>
       <Header />
@@ -78,47 +134,69 @@ export default function ContactPage() {
             </div>
 
             <div className="bg-muted/20 rounded-3xl p-8 md:p-12">
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-bold mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-6 py-4 rounded-full bg-background border border-border focus:border-accent outline-none transition-colors"
-                    placeholder="Your name"
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-bold">Name</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Your name"
+                            {...field}
+                            className="w-full px-6 py-4 rounded-full bg-background border border-border focus:border-accent outline-none transition-colors"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-bold mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-6 py-4 rounded-full bg-background border border-border focus:border-accent outline-none transition-colors"
-                    placeholder="your@email.com"
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-bold">Email</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="your@email.com"
+                            {...field}
+                            className="w-full px-6 py-4 rounded-full bg-background border border-border focus:border-accent outline-none transition-colors"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-bold mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={6}
-                    className="w-full px-6 py-4 rounded-3xl bg-background border border-border focus:border-accent outline-none transition-colors resize-none"
-                    placeholder="Tell us about your project..."
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-bold">Message</FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="Tell us about your project..."
+                            rows={6}
+                            {...field}
+                            className="w-full px-6 py-4 rounded-3xl bg-background border border-border focus:border-accent outline-none transition-colors resize-none"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full px-8 py-4 bg-accent text-accent-foreground rounded-full font-bold text-lg hover:scale-105 transition-transform"
-                >
-                  Send Message
-                </button>
-              </form>
+                  <Button
+                    type="submit"
+                    disabled={form.formState.isSubmitting}
+                    className="w-full px-8 py-4 bg-accent text-accent-foreground rounded-full font-bold text-lg hover:scale-105 transition-transform"
+                  >
+                    {form.formState.isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
+              </Form>
             </div>
           </div>
         </section>
