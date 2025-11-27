@@ -56,7 +56,7 @@ export function ServicesSection() {
             <Link
               key={service.number}
               href={service.href}
-              className="group relative bg-background border-2 border-foreground/10 hover:border-accent rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer block"
+              className="group relative overflow-hidden bg-background border-2 border-foreground/10 hover:border-accent rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer block"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
