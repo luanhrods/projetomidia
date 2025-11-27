@@ -96,7 +96,7 @@ export function Footer() {
 
         <div className="pt-6 sm:pt-8 border-t-2 border-border flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <p className="text-muted-foreground font-medium text-sm sm:text-base">
-            projetomidia.com
+            © {new Date().getFullYear()} projetomidia. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8 font-medium text-muted-foreground text-sm sm:text-base">
             <a href="/privacy" className="hover:text-accent transition-colors">
