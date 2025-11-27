@@ -47,7 +47,7 @@ export function ContactSection() {
               className="text-lg sm:text-xl px-10 sm:px-12 py-6 sm:py-8 bg-transparent border-2 border-foreground hover:bg-foreground hover:text-background font-black rounded-full transition-all hover:scale-110 w-full sm:w-auto"
             >
               <Mail className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6" />
-              <span className="truncate">contato@projetomidia.com</span>
+              <span className="truncate">hey@projetomidia.com</span>
             </Button>
           </div>
         </div>
