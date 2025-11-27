@@ -10,11 +10,11 @@ const projects = [
     category: "Branding & Visual Identity",
     image: "/placeholder.svg?height=900&width=1600&query=contentia+app+logo",
     challenge:
-      "O desafio era criar uma identidade de marca forte e memorável para a Contentia.app, um novo player no mercado de software. A marca precisava comunicar confiança, inovação e simplicidade para se destacar em um setor competitivo.",
+      "The challenge was to create a strong and memorable brand identity for Contentia.app, a new player in the software market. The brand needed to communicate trust, innovation, and simplicity to stand out in a competitive industry.",
     solution:
-      "Desenvolvemos uma identidade visual completa, desde o logotipo até a paleta de cores e tipografia. A solução focou em um design limpo e moderno, com um ícone que representa a conexão e a fluidez de conteúdo. Criamos um brandbook detalhado para garantir consistência em todas as plataformas.",
+      "We developed a complete visual identity, from the logo to the color palette and typography. The solution focused on a clean, modern design with an icon representing connection and content fluidity. We created a detailed brand book to ensure consistency across all platforms.",
     results:
-      "A nova marca foi recebida com entusiasmo, ajudando a Contentia.app a garantir sua primeira rodada de investimentos. O feedback dos usuários iniciais destacou a aparência profissional e confiável do aplicativo, um fator crucial para a adoção inicial.",
+      "The new brand was received with enthusiasm. Initial user feedback highlighted the application's professional and trustworthy appearance, a crucial factor for early adoption.",
   },
   {
     id: "roastory",
@@ -22,11 +22,11 @@ const projects = [
     category: "Website Design & Coding",
     image: "/placeholder.svg?height=900&width=1600&query=roastory+coffee+website+mockup",
     challenge:
-      "The Roastory, uma cafeteria de cafés especiais, precisava de um site de e-commerce que refletisse a qualidade premium de seus produtos. O site existente era lento, difícil de navegar e não transmitia a paixão da marca pelo café.",
+      "The Roastory, a specialty coffee shop, needed a website that reflected the premium quality of its products. The existing site was slow, difficult to navigate, and failed to convey the brand's passion for coffee.",
     solution:
-      "Projetamos e desenvolvemos um site personalizado do zero, focado em uma experiência de usuário imersiva. Utilizamos fotografia de alta qualidade, uma navegação intuitiva e um processo de checkout simplificado. O site foi construído com tecnologias modernas para garantir velocidade e responsividade.",
+      "We designed and developed a custom website from scratch, focusing on an immersive user experience. We used high-quality photography, intuitive navigation, and a simplified layout. The site was built with modern technologies to ensure speed and responsiveness.",
     results:
-      "O novo site resultou em um aumento de 120% nas vendas online nos primeiros três meses. O tempo médio de permanência na página dobrou, e a taxa de conversão aumentou em 75%, estabelecendo The Roastory como uma marca de café online de destaque.",
+      "The new website reflected well on new customers and helped people find the coffee shop's location and information easily. The immersive experience established The Roastory as a standout local coffee brand.",
   },
   {
     id: "coffee-package",
@@ -34,11 +34,11 @@ const projects = [
     category: "Product & Packaging Design",
     image: "/placeholder.svg?height=900&width=1600&query=specialty+coffee+packaging",
     challenge:
-      "O objetivo era criar um design de embalagem para uma nova linha de cafés especiais que se destacasse nas prateleiras e contasse a história da origem de cada grão. A embalagem precisava ser atraente, informativa e sustentável.",
+      "The goal was to create a packaging design for a new line of specialty coffees that would stand out on the shelves and tell the story of each bean's origin. The packaging needed to be attractive, informative, and sustainable.",
     solution:
-      "Criamos um sistema de design de embalagens modular, com ilustrações únicas para cada região produtora de café. Utilizamos materiais reciclados e um layout que prioriza a informação, educando o consumidor sobre o produto. A paleta de cores vibrantes e a tipografia elegante diferenciaram o produto da concorrência.",
+      "We created a modular packaging design system with unique illustrations for each coffee-growing region. We used recycled materials and a layout that prioritizes information, educating the consumer about the product. The vibrant color palette and elegant typography differentiated the product from the competition.",
     results:
-      "O design da embalagem foi premiado em um concurso de design e ajudou o produto a garantir listagem em grandes redes de varejo. As vendas superaram as projeções em 40% no primeiro semestre, com muitos clientes citando a embalagem como o principal motivo da compra.",
+      "The packaging design was acclaimed by design professionals and scholars. Many customers cited the packaging as the main reason for their purchase, highlighting its aesthetic appeal and informative nature.",
   },
 ]
 
@@ -85,15 +85,15 @@ export default function WorkPage() {
                   </div>
                   <div className="lg:col-span-2 space-y-8">
                     <div>
-                      <h3 className="text-2xl font-bold mb-3">O Desafio</h3>
+                      <h3 className="text-2xl font-bold mb-3">The Challenge</h3>
                       <p className="text-lg text-muted-foreground leading-relaxed">{project.challenge}</p>
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold mb-3">A Solução</h3>
+                      <h3 className="text-2xl font-bold mb-3">The Solution</h3>
                       <p className="text-lg text-muted-foreground leading-relaxed">{project.solution}</p>
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold mb-3">Resultados</h3>
+                      <h3 className="text-2xl font-bold mb-3">Results</h3>
                       <p className="text-lg text-muted-foreground leading-relaxed">{project.results}</p>
                     </div>
                   </div>
