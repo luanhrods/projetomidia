@@ -100,10 +100,11 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">Contact</h2>
                 <p className="text-lg leading-relaxed">
-                  For questions about these Terms of Service, please contact us at{" "}
-                  <a href="mailto:hey@projetomidia.com" className="text-accent hover:underline">
-                    hey@projetomidia.com
-                  </a>
+                  For questions about these Terms of Service, please use our{" "}
+                  <Link href="/contact" className="text-accent hover:underline">
+                    contact form
+                  </Link>
+                  .
                 </p>
               </div>
             </div>

@@ -2,7 +2,7 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Mail, MapPin } from "lucide-react"
+import { Mail } from "lucide-react"
 import { TallyForm } from "@/components/tally-form"
 
 export default function ContactPage() {
@@ -31,41 +31,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="mt-16 grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
-              {/* Left Column: Contact Info */}
-              <div className="text-left">
-                <h2 className="text-3xl font-bold mb-4">Get in Touch Directly</h2>
-                <p className="text-muted-foreground mb-8">
-                  If you prefer, you can also reach out to us through the channels below. We're always happy to chat.
-                </p>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg">Email</h3>
-                      <a
-                        href="mailto:hey@projetomidia.com"
-                        className="text-muted-foreground hover:text-accent transition-colors"
-                      >
-                        hey@projetomidia.com
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg">Location</h3>
-                      <p className="text-muted-foreground">Cotia, São Paulo, Brazil</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column: Form */}
+            <div className="mt-16 max-w-2xl mx-auto">
               <div className="bg-card/50 backdrop-blur-sm border border-border/20 rounded-3xl p-2 md:p-3">
                 <TallyForm />
               </div>
