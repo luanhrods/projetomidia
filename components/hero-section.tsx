@@ -4,6 +4,7 @@ import { ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { HeroBackground3D } from "./hero-background-3d"
 import { useEffect, useState } from "react"
+import Link from "next/link"
 
 export function HeroSection() {
   const [scrollY, setScrollY] = useState(0)
@@ -45,18 +46,22 @@ export function HeroSection() {
 
             <div className="mt-10 flex flex-col flex-wrap gap-4 sm:flex-row sm:gap-6">
               <Button
+                asChild
                 size="lg"
                 className="group w-full rounded-full bg-accent px-10 py-7 text-lg font-black text-accent-foreground shadow-2xl transition-all hover:scale-110 hover:bg-accent/90 hover:shadow-accent/50 sm:w-auto md:px-12 md:py-8 md:text-xl"
               >
-                See Our Work
-                <ArrowRight className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-2" />
+                <Link href="/work">
+                  See Our Work
+                  <ArrowRight className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-2" />
+                </Link>
               </Button>
               <Button
+                asChild
                 size="lg"
                 variant="outline"
                 className="w-full rounded-full border-4 border-foreground bg-transparent px-10 py-7 text-lg font-black transition-all hover:scale-110 hover:bg-foreground hover:text-background sm:w-auto md:px-12 md:py-8 md:text-xl"
               >
-                Start a Project
+                <Link href="/contact">Start a Project</Link>
               </Button>
             </div>
           </div>
