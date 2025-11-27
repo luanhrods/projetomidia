@@ -30,7 +30,7 @@ const projects = [
   },
   {
     id: "cacador-de-carros",
-    title: "Caçador de Carros",
+    title: "Caçador de Carros (Car Hunter)",
     category: "Web Design & Development",
     image: "/placeholder.svg?height=900&width=1600&query=car+hunter+website+mockup",
     challenge:
