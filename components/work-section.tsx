@@ -76,13 +76,13 @@ export function WorkSection() {
 
               <div className="mt-4 sm:mt-6 md:mt-8 flex items-center justify-between gap-4">
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-1 sm:mb-2 group-hover:text-accent transition-colors truncate">
+                  <h3 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-1 sm:mb-2 group-hover:text-accent transition-colors truncate">
                     {project.title}
                   </h3>
-                  <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-medium">{project.category}</p>
+                  <p className="text-lg sm:text-xl md:text-xl text-muted-foreground font-medium">{project.category}</p>
                 </div>
                 <div
-                  className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black transition-all duration-500 flex-shrink-0 ${
+                  className={`text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-black transition-all duration-500 flex-shrink-0 ${
                     hoveredIndex === index ? "text-accent translate-x-2 sm:translate-x-4" : "text-muted/20"
                   }`}
                 >
