@@ -1,7 +1,7 @@
 "use client"
 
 import { ArrowRight, Sparkles } from "lucide-react"
-import { Button } from "./ui/button"
+import { Button } from "components/ui/button"
 import { HeroBackground3D } from "./hero-background-3d"
 import { useEffect, useState } from "react"
 import Link from "next/link"

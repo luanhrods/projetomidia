@@ -5,8 +5,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu"
-import { Button } from "./ui/button"
+} from "components/ui/dropdown-menu"
+import { Button } from "components/ui/button"
 import { Menu } from "lucide-react"
 import Link from "next/link"
 

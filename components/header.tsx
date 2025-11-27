@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { X, Menu } from "lucide-react"
-import { Button } from "./ui/button"
+import { Button } from "components/ui/button"
 import { useIsMobile } from "@/hooks/use-is-mobile"
 import { DesktopHeader } from "./desktop-header"
 
