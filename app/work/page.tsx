@@ -29,16 +29,16 @@ const projects = [
       "The new website reflected well on new customers and helped people find the coffee shop's location and information easily. The immersive experience established The Roastory as a standout local coffee brand.",
   },
   {
-    id: "coffee-package",
-    title: "Coffee Package Study",
-    category: "Product & Packaging Design",
-    image: "/placeholder.svg?height=900&width=1600&query=specialty+coffee+packaging",
+    id: "cacador-de-carros",
+    title: "Caçador de Carros",
+    category: "Web Design & Development",
+    image: "/placeholder.svg?height=900&width=1600&query=car+hunter+website+mockup",
     challenge:
-      "The goal was to create a packaging design for a new line of specialty coffees that would stand out on the shelves and tell the story of each bean's origin. The packaging needed to be attractive, informative, and sustainable.",
+      "The challenge was to design and develop a car buying and selling platform for a prominent automotive journalist and YouTuber with over 470,000 subscribers. The platform needed to reflect his strong personal brand, be highly trustworthy, and provide a seamless user experience for both buyers and sellers.",
     solution:
-      "We created a modular packaging design system with unique illustrations for each coffee-growing region. We used recycled materials and a layout that prioritizes information, educating the consumer about the product. The vibrant color palette and elegant typography differentiated the product from the competition.",
+      "We built a custom, high-performance web platform focusing on intuitive navigation, powerful search filters, and a clean interface. The design reinforces the founder's personal brand identity, integrating his content and expertise to build user trust. The development focused on security, scalability, and a mobile-first approach.",
     results:
-      "The packaging design was acclaimed by design professionals and scholars. Many customers cited the packaging as the main reason for their purchase, highlighting its aesthetic appeal and informative nature.",
+      "The platform launched successfully, receiving positive feedback for its user-friendly design and robust functionality. It effectively translated the founder's authority into a digital marketplace, creating a new revenue stream and strengthening his brand ecosystem.",
   },
 ]
 
