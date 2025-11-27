@@ -28,7 +28,7 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">Agreement to Terms</h2>
                 <p className="text-lg leading-relaxed">
-                  By accessing or using Enchantè Digital's services, you agree to be bound by these Terms of Service. If
+                  By accessing or using PMD's services, you agree to be bound by these Terms of Service. If
                   you disagree with any part of these terms, you may not access our services.
                 </p>
               </div>
@@ -36,7 +36,7 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">Services</h2>
                 <p className="text-lg leading-relaxed">
-                  Enchantè Digital provides digital design and marketing services including but not limited to brand
+                  PMD provides digital design and marketing services including but not limited to brand
                   strategy, visual identity, web design, digital marketing, content creation, and social media
                   management.
                 </p>
@@ -68,7 +68,7 @@ export default function TermsPage() {
                 <h2 className="text-3xl font-bold text-foreground mb-4">Intellectual Property</h2>
                 <p className="text-lg leading-relaxed">
                   Upon full payment, clients receive ownership of final deliverables as specified in the project
-                  agreement. Enchantè Digital retains the right to showcase work in our portfolio unless otherwise
+                  agreement. PMD retains the right to showcase work in our portfolio unless otherwise
                   agreed.
                 </p>
               </div>
@@ -76,7 +76,7 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">Limitation of Liability</h2>
                 <p className="text-lg leading-relaxed">
-                  Enchantè Digital shall not be liable for any indirect, incidental, special, consequential, or punitive
+                  PMD shall not be liable for any indirect, incidental, special, consequential, or punitive
                   damages resulting from your use or inability to use our services.
                 </p>
               </div>
@@ -101,8 +101,8 @@ export default function TermsPage() {
                 <h2 className="text-3xl font-bold text-foreground mb-4">Contact</h2>
                 <p className="text-lg leading-relaxed">
                   For questions about these Terms of Service, please contact us at{" "}
-                  <a href="mailto:hey@enchante.digital" className="text-accent hover:underline">
-                    hey@enchante.digital
+                  <a href="mailto:contato@projetomidia.com" className="text-accent hover:underline">
+                    contato@projetomidia.com
                   </a>
                 </p>
               </div>

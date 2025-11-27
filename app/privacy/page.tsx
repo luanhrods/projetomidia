@@ -28,7 +28,7 @@ export default function PrivacyPage() {
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">Introduction</h2>
                 <p className="text-lg leading-relaxed">
-                  At Enchantè Digital, we take your privacy seriously. This Privacy Policy explains how we collect, use,
+                  At PMD, we take your privacy seriously. This Privacy Policy explains how we collect, use,
                   disclose, and safeguard your information when you visit our website or use our services.
                 </p>
               </div>
@@ -77,8 +77,8 @@ export default function PrivacyPage() {
                 <h2 className="text-3xl font-bold text-foreground mb-4">Contact Us</h2>
                 <p className="text-lg leading-relaxed">
                   If you have any questions about this Privacy Policy, please contact us at{" "}
-                  <a href="mailto:hey@enchante.digital" className="text-accent hover:underline">
-                    hey@enchante.digital
+                  <a href="mailto:contato@projetomidia.com" className="text-accent hover:underline">
+                    contato@projetomidia.com
                   </a>
                 </p>
               </div>

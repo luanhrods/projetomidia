@@ -20,7 +20,7 @@ export default function AboutPage() {
             <h1 className="text-[8vw] md:text-[120px] lg:text-[160px] font-bold leading-[0.9] tracking-tight mb-6 text-balance">
               About
               <br />
-              Enchantè
+              PMD
             </h1>
             <p className="text-2xl md:text-3xl text-muted-foreground max-w-2xl text-pretty">
               We're a digital design agency that believes in the power of bold creativity and strategic thinking.
@@ -33,7 +33,7 @@ export default function AboutPage() {
             <h2 className="text-6xl md:text-8xl font-bold mb-12 text-balance">Our Story</h2>
             <div className="space-y-8 text-xl md:text-2xl text-muted-foreground max-w-4xl leading-relaxed">
               <p>
-                Founded in 2018, Enchantè Digital emerged from a simple belief: brands deserve better. Better design,
+                Founded in 2018, PMD emerged from a simple belief: brands deserve better. Better design,
                 better strategy, and better results.
               </p>
               <p>

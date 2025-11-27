@@ -80,10 +80,10 @@ export function Header() {
           <div className="mt-8 sm:mt-12 md:mt-16 space-y-3 sm:space-y-4 text-sm border-t border-primary-foreground/20 pt-6 sm:pt-8">
             <p className="opacity-70 text-sm sm:text-base">New business? Let's talk:</p>
             <a
-              href="mailto:hey@enchante.digital"
+              href="mailto:contato@projetomidia.com"
               className="text-lg sm:text-xl md:text-2xl font-bold hover:text-accent transition-colors block break-all"
             >
-              hey@enchante.digital
+              contato@projetomidia.com
             </a>
             <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-6 text-sm sm:text-base">
               <a href="#" className="hover:text-accent transition-colors font-medium">
