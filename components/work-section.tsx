@@ -9,25 +9,25 @@ export function WorkSection() {
 
   const projects = [
     {
-      title: "Dr. Lair Ribeiro",
-      category: "Infoprodutos",
-      image: "/placeholder.svg?height=800&width=1200&query=medical+expert",
+      title: "Contentia.app",
+      category: "Branding",
+      image: "/placeholder.svg?height=800&width=1200&query=modern+app+branding",
       color: "from-accent/20 to-transparent",
-      href: "https://www.luanchicale.com.br/projetos/dr-lair-ribeiro",
+      href: "/work#contentia",
     },
     {
-      title: "Dra. Kátia Haranaka",
-      category: "Infoprodutos",
-      image: "/placeholder.svg?height=800&width=1200&query=health+professional",
+      title: "The Roastory Coffee",
+      category: "Website Design & Coding",
+      image: "/placeholder.svg?height=800&width=1200&query=specialty+coffee+website",
       color: "from-foreground/20 to-transparent",
-      href: "https://www.luanchicale.com.br/projetos/dra-katia-haranaka",
+      href: "/work#roastory",
     },
     {
-      title: "O Corpo Explica",
-      category: "Infoprodutos",
-      image: "/placeholder.svg?height=800&width=1200&query=body+language",
+      title: "Coffee Package",
+      category: "Product Design",
+      image: "/placeholder.svg?height=800&width=1200&query=coffee+packaging+design",
       color: "from-accent/30 to-transparent",
-      href: "https://www.luanchicale.com.br/projetos/o-corpo-explica",
+      href: "/work#coffee-package",
     },
   ]
 
@@ -52,8 +52,6 @@ export function WorkSection() {
             <Link
               key={project.title}
               href={project.href}
-              target="_blank"
-              rel="noopener noreferrer"
               className="group block"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}

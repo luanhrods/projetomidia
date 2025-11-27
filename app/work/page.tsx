@@ -3,6 +3,45 @@ import { Footer } from "@/components/footer"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 
+const projects = [
+  {
+    id: "contentia",
+    title: "Contentia.app",
+    category: "Branding & Visual Identity",
+    image: "/placeholder.svg?height=900&width=1600&query=contentia+app+logo",
+    challenge:
+      "O desafio era criar uma identidade de marca forte e memorável para a Contentia.app, um novo player no mercado de software. A marca precisava comunicar confiança, inovação e simplicidade para se destacar em um setor competitivo.",
+    solution:
+      "Desenvolvemos uma identidade visual completa, desde o logotipo até a paleta de cores e tipografia. A solução focou em um design limpo e moderno, com um ícone que representa a conexão e a fluidez de conteúdo. Criamos um brandbook detalhado para garantir consistência em todas as plataformas.",
+    results:
+      "A nova marca foi recebida com entusiasmo, ajudando a Contentia.app a garantir sua primeira rodada de investimentos. O feedback dos usuários iniciais destacou a aparência profissional e confiável do aplicativo, um fator crucial para a adoção inicial.",
+  },
+  {
+    id: "roastory",
+    title: "The Roastory Coffee",
+    category: "Website Design & Coding",
+    image: "/placeholder.svg?height=900&width=1600&query=roastory+coffee+website+mockup",
+    challenge:
+      "The Roastory, uma cafeteria de cafés especiais, precisava de um site de e-commerce que refletisse a qualidade premium de seus produtos. O site existente era lento, difícil de navegar e não transmitia a paixão da marca pelo café.",
+    solution:
+      "Projetamos e desenvolvemos um site personalizado do zero, focado em uma experiência de usuário imersiva. Utilizamos fotografia de alta qualidade, uma navegação intuitiva e um processo de checkout simplificado. O site foi construído com tecnologias modernas para garantir velocidade e responsividade.",
+    results:
+      "O novo site resultou em um aumento de 120% nas vendas online nos primeiros três meses. O tempo médio de permanência na página dobrou, e a taxa de conversão aumentou em 75%, estabelecendo The Roastory como uma marca de café online de destaque.",
+  },
+  {
+    id: "coffee-package",
+    title: "Coffee Package Study",
+    category: "Product & Packaging Design",
+    image: "/placeholder.svg?height=900&width=1600&query=specialty+coffee+packaging",
+    challenge:
+      "O objetivo era criar um design de embalagem para uma nova linha de cafés especiais que se destacasse nas prateleiras e contasse a história da origem de cada grão. A embalagem precisava ser atraente, informativa e sustentável.",
+    solution:
+      "Criamos um sistema de design de embalagens modular, com ilustrações únicas para cada região produtora de café. Utilizamos materiais reciclados e um layout que prioriza a informação, educando o consumidor sobre o produto. A paleta de cores vibrantes e a tipografia elegante diferenciaram o produto da concorrência.",
+    results:
+      "O design da embalagem foi premiado em um concurso de design e ajudou o produto a garantir listagem em grandes redes de varejo. As vendas superaram as projeções em 40% no primeiro semestre, com muitos clientes citando a embalagem como o principal motivo da compra.",
+  },
+]
+
 export default function WorkPage() {
   return (
     <>
@@ -29,46 +68,37 @@ export default function WorkPage() {
         </section>
 
         <section className="py-20 px-6 md:px-12 lg:px-24">
-          <div className="max-w-7xl mx-auto space-y-24">
-            {[
-              {
-                title: "TechVision",
-                category: "Brand Identity & Web Design",
-                desc: "Complete rebrand for a leading AI startup, including visual identity and digital presence.",
-              },
-              {
-                title: "LuxeWear",
-                category: "E-commerce & Digital Marketing",
-                desc: "Luxury fashion brand launch with custom e-commerce platform and integrated marketing.",
-              },
-              {
-                title: "GreenEarth",
-                category: "Brand Strategy & Content",
-                desc: "Sustainable lifestyle brand positioning and content strategy driving 300% growth.",
-              },
-              {
-                title: "FinanceFlow",
-                category: "Visual Identity & App Design",
-                desc: "Modern fintech app with bold visual identity and intuitive user experience.",
-              },
-            ].map((project, i) => (
-              <div key={project.title} className="group cursor-pointer">
-                <div className="relative aspect-[16/9] bg-muted/20 rounded-3xl overflow-hidden mb-6 hover:scale-[1.02] transition-transform">
+          <div className="max-w-7xl mx-auto space-y-24 md:space-y-32">
+            {projects.map((project, i) => (
+              <div key={project.id} id={project.id} className="scroll-mt-24">
+                <div className="relative aspect-[16/9] bg-muted/20 rounded-3xl overflow-hidden mb-8">
                   <img
-                    src={`/placeholder.svg?height=800&width=1400&query=${project.title} project showcase`}
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                  <div>
-                    <h3 className="text-5xl md:text-6xl font-bold mb-2 group-hover:text-accent transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-xl text-accent">{project.category}</p>
+                <div className="grid lg:grid-cols-3 gap-8 md:gap-12">
+                  <div className="lg:col-span-1">
+                    <h2 className="text-4xl md:text-5xl font-bold text-accent mb-2">{project.title}</h2>
+                    <p className="text-lg text-muted-foreground">{project.category}</p>
                   </div>
-                  <p className="text-xl text-muted-foreground max-w-md text-pretty">{project.desc}</p>
+                  <div className="lg:col-span-2 space-y-8">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3">O Desafio</h3>
+                      <p className="text-lg text-muted-foreground leading-relaxed">{project.challenge}</p>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3">A Solução</h3>
+                      <p className="text-lg text-muted-foreground leading-relaxed">{project.solution}</p>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3">Resultados</h3>
+                      <p className="text-lg text-muted-foreground leading-relaxed">{project.results}</p>
+                    </div>
+                  </div>
                 </div>
+                {i < projects.length - 1 && <hr className="mt-24 md:mt-32 border-border/50" />}
               </div>
             ))}
           </div>

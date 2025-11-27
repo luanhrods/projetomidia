@@ -13,7 +13,7 @@ import Link from "next/link"
 export function DesktopHeader() {
   const menuItems = [
     { href: "/", label: "Home" },
-    { href: "#work", label: "Work" },
+    { href: "/work", label: "Work" },
     { href: "#services", label: "Services" },
     { href: "/studio", label: "Studio" },
     { href: "#approach", label: "Approach" },

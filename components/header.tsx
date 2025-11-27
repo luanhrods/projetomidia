@@ -60,7 +60,7 @@ export function Header() {
             }`}
           >
             {[
-              { href: "#work", label: "Work" },
+              { href: "/work", label: "Work" },
               { href: "#services", label: "Services" },
               { href: "/studio", label: "Studio" },
               { href: "#approach", label: "Approach" },
