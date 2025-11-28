@@ -59,11 +59,13 @@ function ChartContainer({
         const theme = itemConfig.theme
 
         if (color) {
-          style[`--color-${key}` as any] = color
+          // Correção aplicada aqui: usando (style as any) para permitir a atribuição de variáveis CSS customizadas
+          (style as any)[`--color-${key}`] = color
         } else if (theme) {
           const colorForTheme =
             activeTheme === 'dark' ? theme.dark : theme.light
-          style[`--color-${key}` as any] = colorForTheme
+          // Correção aplicada aqui: usando (style as any)
+          (style as any)[`--color-${key}`] = colorForTheme
         }
       })
     }
