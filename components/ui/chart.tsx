@@ -62,8 +62,12 @@ function ChartContainer({
           // Correção aplicada aqui: usando (style as any) para permitir a atribuição de variáveis CSS customizadas
           (style as any)[`--color-${key}`] = color
         } else if (theme) {
-          const colorForTheme: string = // Adicionando tipagem explícita
-            activeTheme === 'dark' ? theme.dark : theme.light
+          let colorForTheme: string
+          if (activeTheme === 'dark') {
+            colorForTheme = theme.dark
+          } else {
+            colorForTheme = theme.light
+          }
           // Correção aplicada aqui: usando (style as any)
           (style as any)[`--color-${key}`] = colorForTheme
         }
@@ -222,9 +226,11 @@ function ChartTooltipContent({
                         {itemConfig?.label || item.name}
                       </span>
                     </div>
-                    {item.value && (
+                    {item.value !== undefined && (
                       <span className="text-foreground font-mono font-medium tabular-nums">
-                        {item.value.toLocaleString()}
+                        {typeof item.value === 'number'
+                          ? item.value.toLocaleString()
+                          : String(item.value)}
                       </span>
                     )}
                   </div>
